@@ -1,1 +1,3 @@
-# Schedule generator for new tab page
+# Powerschool+
+
+An extension made to enhance the powerschool experience at BCA
