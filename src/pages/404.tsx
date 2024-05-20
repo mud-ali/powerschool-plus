@@ -5,7 +5,7 @@ export default function NotFound() {
             <br />
             <p>Page not found
                 <br /> <br />
-                Lost? Go <a href="/" className="text-blue-700 underline">Home.</a>
+                Lost? Go <a href="/" className="text-blue-400 underline">Home.</a>
             </p>
         </div>
     );
