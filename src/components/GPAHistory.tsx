@@ -35,7 +35,7 @@ export default function GPAHistory(props: {gpa: number[]}) {
         xaxis: {
             labels: {
                 style: {
-                    colors: 'white'
+                    colors: 'blue'
                 },
             },
             categories: Array.from({length: props.gpa.length}, (_, i) => i + 1)
@@ -43,7 +43,7 @@ export default function GPAHistory(props: {gpa: number[]}) {
         yaxis: {
             labels: {
                 style: {
-                    colors: 'white'
+                    colors: 'blue'
                 },
             },
         }
