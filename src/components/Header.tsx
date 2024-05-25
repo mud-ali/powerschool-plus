@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
-        <div className='header bg-slate-700 py-14 h-screen w-32'>
+        <div className='header bg-slate-700 py-14 h-screen w-32 mr-4'>
             <ul className='list-none flex justify-between flex-col text-right h-full align-right'>
                 <li>
                     <Link to="/grades" className='grades-link'>
