@@ -15,7 +15,10 @@ export default function GPAHistory(props: {gpa: number[]}) {
             type: 'line',
             zoom: {
                 enabled: false
-            }
+            },
+            toolbar: {
+                show: false
+            },
         },
         dataLabels: {
             enabled: false
@@ -28,14 +31,14 @@ export default function GPAHistory(props: {gpa: number[]}) {
         },
         grid: {
             row: {
-                colors: ['transparent'], // alternating background colors
+                colors: ['transparent'],
                 opacity: 0.5
             },
         },
         xaxis: {
             labels: {
                 style: {
-                    colors: 'blue'
+                    colors: '#fff'
                 },
             },
             categories: Array.from({length: props.gpa.length}, (_, i) => i + 1)
@@ -43,7 +46,7 @@ export default function GPAHistory(props: {gpa: number[]}) {
         yaxis: {
             labels: {
                 style: {
-                    colors: 'blue'
+                    colors: '#fff'
                 },
             },
         }
