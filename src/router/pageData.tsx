@@ -4,7 +4,7 @@ import type { pageInfo } from "@/types/pageInfo";
 import { userInfo } from "@/types/userInfo";
 
 const fakeUser : userInfo = {
-    name: "Mudasir",
+    name: "User",
     gpa: 3.5,
     pastGpas: [
         3.7, 2.6, 4.0, 3.2, 3.5, 3.6, 3.7
