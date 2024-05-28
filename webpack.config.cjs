@@ -6,9 +6,9 @@ module.exports = {
     mode: 'production',
     target: 'web',
     entry: {
-        contentScript: './src/content/index.ts',
-        background: './src/background/index.ts',
-        react: './src/react/index.tsx'
+        contentScript: './content_src/index.ts',
+        // background: './src/background/index.ts',
+        react: './src/main.tsx'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -41,10 +41,14 @@ module.exports = {
                         ]
                     }
                 }
-            }
+            },
+            { test: /\.css$/, use: 'css-loader' }
         ]
     },
     resolve: {
-        extensions: ['.ts', '.tsx']
+        extensions: ['.ts', '.tsx','.js', '.json', '.jsx'],
+        alias: {
+            '@': path.resolve(__dirname, 'src')
+        }
     }
 };
