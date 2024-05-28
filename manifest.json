@@ -7,6 +7,12 @@
         "default_popup": "index.html",
         "default_title": "Powerschool+"
     },
+    "content_scripts": [
+        {
+            "matches": ["https://*.powerschool.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
     "browser_specific_settings": {
         "gecko": {
             "id": "myemail@aaravdudhia.com",
