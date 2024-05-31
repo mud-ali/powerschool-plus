@@ -1,0 +1,26 @@
+{
+    "name": "Powerschool Plus",
+    "description": "Powerschool LMS, made better",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Powerschool+"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.powerschool.com/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "myemail@aaravdudhia.com",
+            "strict_min_version": "42.0"
+        }
+    }
+}
