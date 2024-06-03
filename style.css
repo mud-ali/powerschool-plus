@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,8 +20,12 @@
   ➜  Network: http://10.100.207.237:5173/ */
 .sideHeader {
     background-color: #00427C;
-    width: 10vw;
+    width: 8vw;
     position: fixed;
     font-size: 1.75rem;
     @apply flex items-center justify-around h-screen flex-col text-white;
+}
+
+.filter-blue{
+  filter: invert(50%) sepia(93%) saturate(1769%) hue-rotate(158deg) brightness(99%) contrast(102%);
 }
