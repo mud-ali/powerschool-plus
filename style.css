@@ -4,11 +4,11 @@
 
 :root {
   font-family: "Noto Sans", sans-serif;
-  line-height: 1.5;
+  /* line-height: 1.5; */
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color-scheme: light;
+  color: rgba(0, 0, 0, 0.87);
   background-color: #ffffff;
 
   font-synthesis: none;
@@ -16,14 +16,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* 
-  ➜  Network: http://10.100.207.237:5173/ */
+
 .sideHeader {
     background-color: #00427C;
     width: 8vw;
     position: fixed;
     font-size: 1.75rem;
     @apply flex items-center justify-around h-screen flex-col text-white;
+}
+
+#app {
+  padding-top:2rem;
+  padding-left:9vw;
 }
 
 .filter-blue{

@@ -12,7 +12,7 @@ function scrapeGrades(){
         let cGrades = Array.from(classesData[i].querySelectorAll('a[class="bold"]')).map(grade => grade.innerHTML.split("<br>"));
         info[cName] = cGrades;
     }
-    localStorage.setItem("class_grades", info);
+    localStorage.setItem("class_grade", info);
 }
 
 if (
