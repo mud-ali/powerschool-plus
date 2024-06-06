@@ -14,16 +14,16 @@
 </head>
 
 <body>
-    <div class="sideHeader">
-        <a href="https://bcts.powerschool.com/guardian/home.html?_userTypeHint=student">
-            <img src="assets/powerschool.svg" alt="Powerschool" width="90px" height="90px"></img>
-        </a>
-        <a href="pages/graph.html">
-            <img src="assets/noun-scatter-plot-778853.svg" alt="Charts" width="70px" height="70px" class="filter-blue"></img>
-        </a>
-        <a href=""><img src="assets/daily-schedule-icon.svg" alt="Schedule" width="80px" height="80px" class="filter-blue"></img></a>
-        <a href="https://kaikim.com/">✅</a>
-    </div>
+  <div class="sideHeader">
+    <a href="https://bcts.powerschool.com/guardian/home.html?_userTypeHint=student">
+        <img src="pages/assets/powerschool.svg" alt="Powerschool" width="90px" height="90px"></img>
+    </a>
+    <a href="graph.html">
+        <img src="pages/assets/noun-scatter-plot-778853.svg" alt="Charts" width="70px" height="70px" class="filter-blue"></img>
+    </a>
+    <a href=""><img src="pages/assets/daily-schedule-icon.svg" alt="Schedule" width="80px" height="80px" class="filter-blue"></img></a>
+    <a href="index.html"><img src="pages/assets/house-svgrepo-com.svg" alt="Home" width="70px" height="70px" class="filter-blue"></img></a>
+  </div>
 
     <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
 
@@ -33,6 +33,40 @@
 
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
+    <div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+
 
 </body>
 
