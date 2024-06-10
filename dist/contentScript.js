@@ -20,5 +20,6 @@ if (
     "https://bcts.powerschool.com/guardian/home.html",
   )
 ) {
-
+    scrapeGrades();
+    
 }
