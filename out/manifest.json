@@ -2,10 +2,21 @@
     "name": "Powerschool Plus",
     "description": "Powerschool LMS, made better",
     "version": "1.0",
-    "manifest_version": 3,
-    "action": {
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
+    "manifest_version": 2,
+    "browser_action": {
         "default_popup": "index.html",
         "default_title": "Powerschool+"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
     },
     "content_scripts": [
         {
