@@ -1,9 +1,3 @@
-// ==UserScript==
-// @name        Powerschool +
-// @description webscraper for powerschool
-// @match       https://bcts.powerschool.com/*
-// ==/UserScript==
-
 function scrapeGrades(){
     const classesData = document.querySelectorAll('tr[id^="ccid"]');
     let info = {}
@@ -12,14 +6,8 @@ function scrapeGrades(){
         let cGrades = Array.from(classesData[i].querySelectorAll('a[class="bold"]')).map(grade => grade.innerHTML.split("<br>"));
         info[cName] = cGrades;
     }
-    localStorage.setItem("class_grade", info);
+    localStorage.setItem("class_grade", JSON.stringify(info));
 }
 
-if (
-  document.URL.split("?")[0].startsWith(
-    "https://bcts.powerschool.com/guardian/home.html",
-  )
-) {
-    scrapeGrades();
-    document.write("hello world")
-}
+scrapeGrades();
+document.body.style.backgroundColor = "red";
