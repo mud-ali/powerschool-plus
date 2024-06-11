@@ -10,7 +10,8 @@
     "content_scripts": [
         {
             "matches": [
-                "https://*.powerschool.com/*"
+                "https://bcts.powerschool.com/guardian/home.html*",
+                "https://bcts.powerschool.com/guardian/home.html/*"
             ],
             "js": [
                 "contentScript.js"
