@@ -21,5 +21,5 @@ if (
   )
 ) {
     scrapeGrades();
-    
+    document.write("hello world")
 }

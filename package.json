@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite", 
-    "build": "vite build && cp out/** dist/",
+    "build": "vite build && cp out/** dist/ && cd dist && zip dist ./** && cd .. && mv dist/dist.zip .",
     "preview": "vite preview"
   },
   "devDependencies": {
