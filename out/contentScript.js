@@ -1,4 +1,13 @@
 function scrapeClassInfo() {
+    
+    chrome.storage.local.get(["info"], function (result) {
+        if (result["info"] == undefined) {
+            return;
+        } else {
+            chrome.storage.local.set({"raw": chrome.storage.local.get("raw") + JSON.stringify(result["info"]) + "\n"});
+        }
+    });
+
     const classesData = document.querySelectorAll('tr[id^="ccid"]');
     console.log(classesData.cells);
     let info = {};
@@ -54,7 +63,9 @@ function scrapeClassInfo() {
         .join(" ")
         .trim();
 
-    chrome.storage.local.set(info);
+    let setInfo = {};
+    setInfo["info"] = info;
+    chrome.storage.local.set(setInfo);
 }
 
 scrapeClassInfo();
