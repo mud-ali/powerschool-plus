@@ -116,6 +116,10 @@
                     </div>
 
                     <div class="chart-container">
+                        <canvas id="line24"></canvas>
+                    </div>
+
+                    <div class="chart-container">
                         <canvas id="line16"></canvas>
                     </div>
 
@@ -134,6 +138,18 @@
                     <div class="chart-container">
                         <canvas id="line20"></canvas>
                     </div>
+
+                    <div class="chart-container">
+                        <canvas id="line21"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line22"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line23"></canvas>
+                    </div>
                     
                 </div>
 
@@ -151,10 +167,10 @@
             new Chart(barCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['21/22', '22/23', '23/24'],
+                    labels: ['T1', 'T2', 'T3'],
                     datasets: [{
                         label: 'GPA',
-                        data: [3.2, 3.7, 4.0],
+                        data: [3.86, 3.89, 3.87],
                         borderWidth: 1
                     }]
                 },
@@ -173,17 +189,17 @@
             const radarCtx = document.getElementById('radar');
             const radarData = {
                 labels: [
-                    'Math',
-                    'Science',
-                    'History',
-                    'Foreign Language',
-                    'Project',
-                    'Gym',
+                    'AP Calculus AB',
+                    'AP Comp Sci A',
+                    'IB Literature_Language I HL',
+                    'IB Hist of Amer I HL',
+                    'Biology',
+                    'IB Espanol IV SL',
 
                 ],
                 datasets: [{
-                    label: '23/24',
-                    data: [92, 59, 5, 81, 100, 1],
+                    label: 'T1',
+                    data: [89.8, 97.4, 91.9, 90.5, 93.2, 91.7],
                     fill: true,
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgb(255, 99, 132)',
@@ -192,8 +208,8 @@
                     pointHoverBackgroundColor: '#fff',
                     pointHoverBorderColor: 'rgb(255, 99, 132)'
                 }, {
-                    label: '22/23',
-                    data: [97, 82, 77, 99, 100, 98],
+                    label: 'T2',
+                    data: [82.7, 97.9, 95.1, 91, 90.7, 94.8],
                     fill: true,
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgb(54, 162, 235)',
@@ -201,6 +217,16 @@
                     pointBorderColor: '#fff',
                     pointHoverBackgroundColor: '#fff',
                     pointHoverBorderColor: 'rgb(54, 162, 235)'
+                }, {
+                    label: 'T3',
+                    data: [93.9, 97.7, 93.8, 89.8, 88.9, 98.3],
+                    fill: true,
+                    backgroundColor: 'rgba(136, 208, 120, 0.8)',
+                    borderColor: 'rgb(148, 222, 160)',
+                    pointBackgroundColor: 'rgb(148, 222, 160)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(148, 222, 160)'
                 }]
             };
             const radarConfig = {
@@ -222,7 +248,7 @@
             const line1Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'IGS',
+                    label: '~IGS',
                     data: [, , ],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
@@ -242,7 +268,7 @@
             const line2Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'Engineering Research',
+                    label: '~Engineering Research',
                     data: [100, 100, 100],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
@@ -322,7 +348,7 @@
             const line6Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'Automotive Engineering',
+                    label: '~Automotive Engineering',
                     data: [100, 100, 100],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
@@ -342,7 +368,7 @@
             const line7Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'Junior Seminar',
+                    label: '~Junior Seminar',
                     data: [100, 100, 100],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
@@ -362,7 +388,7 @@
             const line8Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'Applied Web App Dev',
+                    label: '~Applied Web App Dev',
                     data: [, , ],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
@@ -402,7 +428,7 @@
             const line10Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'IB_Literature_Language I HL',
+                    label: 'IB Literature_Language I HL',
                     data: [91.9,95.1,93.8],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
@@ -462,8 +488,8 @@
             const line13Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: '~Lunch Grade 11',
+                    data: [, , ],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -482,8 +508,8 @@
             const line14Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: 'Biology',
+                    data: [93.2, 90.7, 88.9],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -502,8 +528,8 @@
             const line15Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: 'IB Espanol IV SL',
+                    data: [91.7, 94.8, 98.3],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -522,8 +548,8 @@
             const line16Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: '~Interactive Design I',
+                    data: [95.9, 95.9, 95.9],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -542,8 +568,8 @@
             const line17Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: 'Cryptology',
+                    data: [100, 100, 100],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -562,8 +588,8 @@
             const line18Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: '~Network Security',
+                    data: [97.2, 97.2, 97.2],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -582,8 +608,8 @@
             const line19Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: 'Botany',
+                    data: [93.9, 93.9, 93.9],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -602,8 +628,8 @@
             const line20Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: '~Processors',
+                    data: [96.5, 96.5, 96.5],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -622,8 +648,8 @@
             const line21Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: 'Sockets and Threading',
+                    data: [99.4, 99.4, 99.4],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -642,8 +668,8 @@
             const line22Data = {
                 labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: '~Clubs',
+                    data: [, , ],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -660,10 +686,10 @@
         <script>
             const line23Ctx = document.getElementById('line23');
             const line23Data = {
-                labels: ['2', '22/23', '23/24'],
+                labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: '~Adv Top Hlth_Well Online',
+                    data: [92.3, 98.8, 100],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -680,10 +706,10 @@
         <script>
             const line24Ctx = document.getElementById('line24');
             const line24Data = {
-                labels: ['21/22', '22/23', '23/24'],
+                labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: '~PE[11_12]',
+                    data: [100, 100, 100],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
