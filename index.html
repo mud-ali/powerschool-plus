@@ -31,7 +31,7 @@
         </a>
     </div>
     <div id="app">
-        <h1>Welcome, [User]</h1>
+        <h1>Welcome,[User]</h1>
     </div>
     <script type="module" src="/main.js"></script>
 
@@ -39,96 +39,148 @@
     <div class="col-8 offset-2 my-5">
         <div class="card">
             <div class="card-body">
-                <h5>Average GPA</h5>
                 <hr>
-
                 <div class="chart-container">
                     <canvas id="bar"></canvas>
                 </div>
                 <hr>
-                <h5>Subject Radar Chart</h5>
-                <hr>
                 <div class="chart-container">
                     <canvas id="radar"></canvas>
                 </div>
+                <hr>
+
+                <div class="line-chart-container">
+                    <div class="chart-container">
+                        <canvas id="line1"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line2"></canvas>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-    <script>
-        const barCtx = document.getElementById('bar');
-        new Chart(barCtx, {
-            type: 'bar',
-            data: {
-                labels: ['23/24', '22/23', '21/22'],
+        <script>
+            const barCtx = document.getElementById('bar');
+            new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['21/22', '22/23', '23/24'],
+                    datasets: [{
+                        label: 'GPA',
+                        data: [3.2, 3.7, 4.0],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+
+        <script>
+            const radarCtx = document.getElementById('radar');
+            const radarData = {
+                labels: [
+                    'Math',
+                    'Science',
+                    'History',
+                    'Foreign Language',
+                    'Project',
+                    'Gym',
+
+                ],
                 datasets: [{
-                    label: 'GPA',
-                    data: [3.2, 3.7, 4.0],
-                    borderWidth: 1
+                    label: '23/24',
+                    data: [92, 59, 5, 81, 100, 1],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    pointBackgroundColor: 'rgb(255, 99, 132)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(255, 99, 132)'
+                }, {
+                    label: '22/23',
+                    data: [97, 82, 77, 99, 100, 98],
+                    fill: true,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    pointBackgroundColor: 'rgb(54, 162, 235)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(54, 162, 235)'
                 }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
+            };
+            const radarConfig = {
+                type: 'radar',
+                data: radarData,
+                options: {
+                    elements: {
+                        line: {
+                            borderWidth: 3
+                        }
                     }
-                }
-            }
-        });
-    </script>
+                },
+            };
+            new Chart(radarCtx, radarConfig);
+        </script>
+
+        <script>
+            const line1Ctx = document.getElementById('line1');
+            const line1Data = {
+                labels: ['21/22', '22/23', '23/24'],
+                datasets: [{
+                    label: 'My English Grade',
+                    data: [72, 94, 86],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line1Config = {
+                type: 'line',
+                data: line1Data,
+            };
+            new Chart(line1Ctx, line1Config);
+        </script>
+
+        <script>
+            const line2Ctx = document.getElementById('line2');
+            const line2Data = {
+                labels: ['21/22', '22/23', '23/24'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line2Config = {
+                type: 'line',
+                data: line2Data,
+            };
+            new Chart(line2Ctx, line2Config);
+        </script>
 
 
-    <script>
-        const radarCtx = document.getElementById('radar');
-        const radarData = {
-            labels: [
-                'Math',
-                'Science',
-                'History',
-                'Foreign Language',
-                'Project',
-                'Gym',
 
-            ],
-            datasets: [{
-                label: '23/24',
-                data: [92, 59, 5, 81, 100, 1],
-                fill: true,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgb(255, 99, 132)',
-                pointBackgroundColor: 'rgb(255, 99, 132)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgb(255, 99, 132)'
-            }, {
-                label: '22/23',
-                data: [97, 82, 77, 99, 100, 98],
-                fill: true,
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgb(54, 162, 235)',
-                pointBackgroundColor: 'rgb(54, 162, 235)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgb(54, 162, 235)'
-            }]
-        };
-        const radarConfig = {
-            type: 'radar',
-            data: radarData,
-            options: {
-                elements: {
-                    line: {
-                        borderWidth: 3
-                    }
-                }
-            },
-        };
-        new Chart(radarCtx, radarConfig);
-    </script>
 
 </body>
 

@@ -33,7 +33,13 @@
   filter: invert(50%) sepia(93%) saturate(1769%) hue-rotate(158deg) brightness(99%) contrast(102%);
 }
 
+.line-chart-container {
+  display: flex; 
+  justify-content: space-around; 
+}
+
 .chart-container {
+  flex: 1;
   max-width: 400px; 
   margin: auto; 
   height: auto; 
