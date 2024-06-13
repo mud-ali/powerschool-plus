@@ -19,19 +19,19 @@
         <a href="https://bcts.powerschool.com/guardian/home.html?_userTypeHint=student">
             <img src="pages/assets/powerschool.svg" alt="Powerschool" width="90px" height="90px" />
         </a>
-        <a href="graph.html">
+        <a href="/index.html">
             <img src="pages/assets/noun-scatter-plot-778853.svg" alt="Charts" width="70px" height="70px"
                 class="filter-blue" />
         </a>
-        <a href=""><img src="pages/assets/daily-schedule-icon.svg" alt="Schedule" width="80px" height="80px"
+        <a href="/pages/sched.html"><img src="pages/assets/daily-schedule-icon.svg" alt="Schedule" width="80px" height="80px"
                 class="filter-blue" />
         </a>
-        <a href="index.html"><img src="pages/assets/house-svgrepo-com.svg" alt="Home" width="70px" height="70px"
+        <a href="https://www.github.com/mud-ali/powerschool-plus"><img src="pages/assets/house-svgrepo-com.svg" alt="Home" width="70px" height="70px"
                 class="filter-blue" />
         </a>
     </div>
     <div id="app">
-        <h1>Welcome,[User]</h1>
+        <h1 class="text-3xl">Welcome!</h1>
     </div>
     <script type="module" src="/main.js"></script>
 
@@ -40,16 +40,21 @@
         <div class="card">
             <div class="card-body">
                 <hr>
-                <div class="chart-container">
+                <div class="chart-container-other">
                     <canvas id="bar"></canvas>
                 </div>
                 <hr>
-                <div class="chart-container">
+                <div class="chart-container-other">
                     <canvas id="radar"></canvas>
                 </div>
                 <hr>
-
-                <div class="line-chart-container">
+                <div class="chart-container-other">
+                    <div id="top">
+                        Grade Averages Over Time
+                        <br>
+                    </div>
+                </div>
+                <div class="line-chart-container flex flex-wrap">
                     <div class="chart-container">
                         <canvas id="line1"></canvas>
                     </div>
@@ -57,6 +62,79 @@
                     <div class="chart-container">
                         <canvas id="line2"></canvas>
                     </div>
+
+                    <div class = "chart-container">
+                        <canvas id = "line3"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line4"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line5"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line6"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line7"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line8"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line9"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line10"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line11"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line12"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line13"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line14"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line15"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line16"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line17"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line18"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line19"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="line20"></canvas>
+                    </div>
+                    
                 </div>
 
 
@@ -142,10 +220,10 @@
         <script>
             const line1Ctx = document.getElementById('line1');
             const line1Data = {
-                labels: ['21/22', '22/23', '23/24'],
+                labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My English Grade',
-                    data: [72, 94, 86],
+                    label: 'IGS',
+                    data: [, , ],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -162,10 +240,10 @@
         <script>
             const line2Ctx = document.getElementById('line2');
             const line2Data = {
-                labels: ['21/22', '22/23', '23/24'],
+                labels: ['T1', 'T2', 'T3'],
                 datasets: [{
-                    label: 'My Math Grade',
-                    data: [99, 36, 76],
+                    label: 'Engineering Research',
+                    data: [100, 100, 100],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -179,6 +257,446 @@
             new Chart(line2Ctx, line2Config);
         </script>
 
+        <script>
+            const line3Ctx = document.getElementById('line3');
+            const line3Data = {
+                labels: ['S1', 'S2'],
+                datasets: [{
+                    label: 'Eng Applications Prog',
+                    data: [96.2, 96.2],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line3Config = {
+                type: 'line',
+                data: line3Data,
+            };
+            new Chart(line3Ctx, line3Config);
+        </script>
+
+        <script>
+            const line4Ctx = document.getElementById('line4');
+            const line4Data = {
+                labels: ['S1', 'S2'],
+                datasets: [{
+                    label: 'Electrical Eng',
+                    data: [96.8, 96.8],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line4Config = {
+                type: 'line',
+                data: line2Data,
+            };
+            new Chart(line4Ctx, line4Config);
+        </script>
+
+        <script>
+            const line5Ctx = document.getElementById('line5');
+            const line5Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'AP Calculus AB',
+                    data: [89.8, 82.7, 93.9],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line5Config = {
+                type: 'line',
+                data: line5Data,
+            };
+            new Chart(line5Ctx, line5Config);
+        </script>
+
+        <script>
+            const line6Ctx = document.getElementById('line6');
+            const line6Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'Automotive Engineering',
+                    data: [100, 100, 100],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line6Config = {
+                type: 'line',
+                data: line6Data,
+            };
+            new Chart(line6Ctx, line6Config);
+        </script>
+
+        <script>
+            const line7Ctx = document.getElementById('line7');
+            const line7Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'Junior Seminar',
+                    data: [100, 100, 100],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line7Config = {
+                type: 'line',
+                data: line7Data,
+            };
+            new Chart(line7Ctx, line7Config);
+        </script>
+
+        <script>
+            const line8Ctx = document.getElementById('line8');
+            const line8Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'Applied Web App Dev',
+                    data: [, , ],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line8Config = {
+                type: 'line',
+                data: line8Data,
+            };
+            new Chart(line8Ctx, line8Config);
+        </script>
+
+        <script>
+            const line9Ctx = document.getElementById('line9');
+            const line9Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'AP Comp Sci A',
+                    data: [97.4, 97.9, 97.7],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line9Config = {
+                type: 'line',
+                data: line9Data,
+            };
+            new Chart(line9Ctx, line9Config);
+        </script>
+
+        <script>
+            const line10Ctx = document.getElementById('line10');
+            const line10Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'IB_Literature_Language I HL',
+                    data: [91.9,95.1,93.8],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line10Config = {
+                type: 'line',
+                data: line10Data,
+            };
+            new Chart(line10Ctx, line10Config);
+        </script>
+
+        <script>
+            const line11Ctx = document.getElementById('line11');
+            const line11Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'Adv Physics for Engineering',
+                    data: [96.3, 100, 100],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line11Config = {
+                type: 'line',
+                data: line11Data,
+            };
+            new Chart(line11Ctx, line11Config);
+        </script>
+
+        <script>
+            const line12Ctx = document.getElementById('line12');
+            const line12Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'IB Hist of Amer I HL',
+                    data: [90.5, 91, 89.8],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line12Config = {
+                type: 'line',
+                data: line12Data,
+            };
+            new Chart(line12Ctx, line12Config);
+        </script>
+
+        <script>
+            const line13Ctx = document.getElementById('line13');
+            const line13Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line13Config = {
+                type: 'line',
+                data: line13Data,
+            };
+            new Chart(line13Ctx, line13Config);
+        </script>
+
+        <script>
+            const line14Ctx = document.getElementById('line14');
+            const line14Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line14Config = {
+                type: 'line',
+                data: line14Data,
+            };
+            new Chart(line14Ctx, line14Config);
+        </script>
+        
+        <script>
+            const line15Ctx = document.getElementById('line15');
+            const line15Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line15Config = {
+                type: 'line',
+                data: line15Data,
+            };
+            new Chart(line15Ctx, line15Config);
+        </script>
+
+        <script>
+            const line16Ctx = document.getElementById('line16');
+            const line16Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line16Config = {
+                type: 'line',
+                data: line16Data,
+            };
+            new Chart(line16Ctx, line16Config);
+        </script>
+
+        <script>
+            const line17Ctx = document.getElementById('line18');
+            const line17Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line17Config = {
+                type: 'line',
+                data: line17Data,
+            };
+            new Chart(line17Ctx, line17Config);
+        </script>
+
+        <script>
+            const line18Ctx = document.getElementById('line18');
+            const line18Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line18Config = {
+                type: 'line',
+                data: line18Data,
+            };
+            new Chart(line18Ctx, line18Config);
+        </script>
+        
+        <script>
+            const line19Ctx = document.getElementById('line19');
+            const line19Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line19Config = {
+                type: 'line',
+                data: line19Data,
+            };
+            new Chart(line19Ctx, line19Config);
+        </script>
+
+        <script>
+            const line20Ctx = document.getElementById('line20');
+            const line20Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line20Config = {
+                type: 'line',
+                data: line20Data,
+            };
+            new Chart(line20Ctx, line20Config);
+        </script>
+        
+        <script>
+            const line21Ctx = document.getElementById('line21');
+            const line21Data = {
+                labels: ['T1', 'T2', 'T3'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line21Config = {
+                type: 'line',
+                data: line21Data,
+            };
+            new Chart(line21Ctx, line21Config);
+        </script>
+
+        <script>
+            const line22Ctx = document.getElementById('line22');
+            const line22Data = {
+                labels: ['T1', '22/23', '23/24'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line22Config = {
+                type: 'line',
+                data: line22Data,
+            };
+            new Chart(line22Ctx, line22Config);
+        </script>
+
+        <script>
+            const line23Ctx = document.getElementById('line23');
+            const line23Data = {
+                labels: ['21/22', '22/23', '23/24'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line23Config = {
+                type: 'line',
+                data: line23Data,
+            };
+            new Chart(line23Ctx, line23Config);
+        </script>
+
+        <script>
+            const line24Ctx = document.getElementById('line24');
+            const line24Data = {
+                labels: ['21/22', '22/23', '23/24'],
+                datasets: [{
+                    label: 'My Math Grade',
+                    data: [99, 36, 76],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            const line24Config = {
+                type: 'line',
+                data: line24Data,
+            };
+            new Chart(line24Ctx, line24Config);
+        </script>
+        
 
 
 
