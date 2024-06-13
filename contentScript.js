@@ -2,7 +2,7 @@ function scrapeClassInfo() {
 
     chrome.storage.local.get(["info"], function (result) {
         if (result["info"] == undefined) {
-            return;
+            console.log("No info found in storage");
         } else {
             chrome.storage.local.set({ "raw": chrome.storage.local.get("raw") + JSON.stringify(result["info"]) + "\n" });
         }
