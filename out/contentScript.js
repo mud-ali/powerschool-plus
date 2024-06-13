@@ -42,6 +42,18 @@ function scrapeClassInfo() {
         info[cName] = cGrades;
     }
 
+    info["lastUpdatedTimestamp"] = new Date().getTime();
+    info["name"] = document.getElementById("content-main")
+        .querySelector("h1")
+        .innerHTML
+        .split("&nbsp;")[0]
+        .split(":")[1]
+        .trim()
+        .split(",")
+        .reverse()
+        .join(" ")
+        .trim();
+
     chrome.storage.local.set(info);
 }
 
