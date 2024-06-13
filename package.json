@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite", 
     "build": "vite build && cp out/** dist/ && cd dist && zip dist ./** && cd .. && mv dist/dist.zip . && rm -f ~/dist.zip && cp dist.zip ~/dist.zip",
+    "static": "cp out/** dist/ && cd dist && zip dist ./** && cd .. && mv dist/dist.zip . && rm -f ~/dist.zip && cp dist.zip ~/dist.zip",
     "preview": "vite preview"
   },
   "devDependencies": {
