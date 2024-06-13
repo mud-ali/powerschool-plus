@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
@@ -14,6 +13,7 @@
 </head>
 
 <body>
+
   <div class="sideHeader">
     <a href="https://bcts.powerschool.com/guardian/home.html?_userTypeHint=student">
         <img src="pages/assets/powerschool.svg" alt="Powerschool" width="90px" height="90px"></img>
@@ -24,52 +24,6 @@
     <a href=""><img src="pages/assets/daily-schedule-icon.svg" alt="Schedule" width="80px" height="80px" class="filter-blue"></img></a>
     <a href="index.html"><img src="pages/assets/house-svgrepo-com.svg" alt="Home" width="70px" height="70px" class="filter-blue"></img></a>
   </div>
-
-    <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
-
-    <!-- <script type="module" src="dimensions.js"></script> -->
-    <script type="module" src="acquisitions.js"></script>
-
-
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-    <div>
-  <canvas id="myChart"></canvas>
-</div>
-
-<div>
-  <canvas id="myChart"></canvas>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-  let obj = LocalStorage.getItem("class_grade");
-  let classes = Object.keys(obj);
-  let grades = Object.values(obj);
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: classes,
-      datasets: [{
-        label: '# of Votes',
-        data: grades,
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-</script>
-
-
 
 </body>
 
