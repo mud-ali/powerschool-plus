@@ -35,12 +35,24 @@
 
 .line-chart-container {
   display: flex; 
+  flex-wrap: wrap;
   justify-content: space-around; 
+  padding-left: 10vw;
+  padding-right: 4vw;
 }
 
-.chart-container {
+.chart-container-other {
   flex: 1;
   max-width: 400px; 
   margin: auto; 
   height: auto; 
+  @apply my-4;
+}
+
+.chart-container {
+  @apply w-1/5 mx-4 my-4;
+}
+
+#top {
+    text-align: center;
 }

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Schedule</title>
+    <style>
+
+        table {
+            width: 94%;
+            height: 100vh;
+            margin-left:7.7vw;
+            box-sizing: border-box;
+            background-color: transparent;
+            border: none;
+            color: #000;
+            border-collapse: collapse;
+            font-size: 0.7rem;
+        }
+
+        th.header-row {
+            background-color: #fff;
+            font-weight: bold;
+            padding: 1vh 1vw;
+            border-bottom: 1px solid black;
+        }
+        th.time-period {
+            background-color: #ffffff;
+            font-weight: bold;
+            padding: 1vh 1vw;
+            border-right: 1px solid black;
+        }
+
+        tr {
+            text-align: center;
+        }
+
+        th, td {
+            border-spacing: 10px;
+            border-left: #000 1px solid;
+            border-bottom: #000 1px solid;
+            font-family: monospace;
+        }
+
+        .time-period {
+            width: min-content;
+            padding: 2rem;
+            width: 5rem;
+        }
+
+        td {
+            padding: 1vh 1vw;
+        }
+
+        table, * {
+            border-collapse: collapse;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="sideHeader">
+        <a href="https://bcts.powerschool.com/guardian/home.html?_userTypeHint=student">
+            <img src="assets/powerschool.svg" alt="Powerschool" width="90px" height="90px"></img>
+        </a>
+        <a href="graph.html">
+            <img src="assets/noun-scatter-plot-778853.svg" alt="Charts" width="70px" height="70px" class="filter-blue"></img>
+        </a>
+        <a href=""><img src="assets/daily-schedule-icon.svg" alt="Schedule" width="80px" height="80px" class="filter-blue"></img></a>
+        <a href="index.html"><img src="assets/house-svgrepo-com.svg" alt="Home" width="70px" height="70px" class="filter-blue"></img></a>
+    </div>
+
+    <table id="sched"><tbody><tr>
+    <th class="blank-cell"></th>
+    <th class="header-row">Monday</th>
+    <th class="header-row">Tuesday</th>
+    <th class="header-row">Wednesday</th>
+    <th class="header-row">Thursday</th>
+    <th class="header-row">Friday</th>
+</tr>
+<tr>
+    <th class="time-period">Period 1 <br>8:00-8:50</th>
+    <td class="Research" style="background-color: rgb(191, 163, 217); color: rgb(0, 0, 0);"> <b>Research </b> <br> Room 168 <br> Liva, Michael</td>
+    <td class="Electrical Eng" style="background-color: rgb(206, 250, 236); color: rgb(0, 0, 0);"> <b>Electrical Eng </b> <br> Room 168 <br> Liva, Michael</td>
+    <td class="Electrical Eng" style="background-color: rgb(206, 250, 236); color: rgb(0, 0, 0);"> <b>Electrical Eng </b> <br> Room 168 <br> Liva, Michael</td>
+    <td class="Electrical Eng" style="background-color: rgb(206, 250, 236); color: rgb(0, 0, 0);"> <b>Electrical Eng </b> <br> Room 168 <br> Liva, Michael</td>
+    <td class="Electrical Eng" style="background-color: rgb(206, 250, 236); color: rgb(0, 0, 0);"> <b>Electrical Eng </b> <br> Room 168 <br> Liva, Michael</td>
+</tr>
+<tr>
+    <th class="time-period">IGS <br>8:54-8:58</th>
+    <td class="IGS" style="background-color: rgb(149, 182, 237); color: rgb(0, 0, 0);"> <b>IGS </b> <br> Room 233 <br> Paul, Eric</td>
+    <td class="IGS" style="background-color: rgb(149, 182, 237); color: rgb(0, 0, 0);"> <b>IGS </b> <br> Room 233 <br> Paul, Eric</td>
+    <td class="IGS" style="background-color: rgb(149, 182, 237); color: rgb(0, 0, 0);"> <b>IGS </b> <br> Room 233 <br> Paul, Eric</td>
+    <td class="IGS" style="background-color: rgb(149, 182, 237); color: rgb(0, 0, 0);"> <b>IGS </b> <br> Room 233 <br> Paul, Eric</td>
+    <td class="IGS" style="background-color: rgb(149, 182, 237); color: rgb(0, 0, 0);"> <b>IGS </b> <br> Room 233 <br> Paul, Eric</td>
+</tr>
+<tr>
+    <th class="time-period">Period 2 <br>9:02-9:52</th>
+    <td class="AP Calculus AB" style="background-color: rgb(138, 209, 149); color: rgb(0, 0, 0);"> <b>AP Calculus AB </b> <br> Room 266 <br> Nevard, John</td>
+    <td class="AP Calculus AB" style="background-color: rgb(138, 209, 149); color: rgb(0, 0, 0);"> <b>AP Calculus AB </b> <br> Room 266 <br> Nevard, John</td>
+    <td rowspan="2" class="Applied Web App Dev" style="background-color: rgb(207, 152, 147); color: rgb(0, 0, 0);"> <b>Applied Web App Dev </b> <br> Room 138A <br> Wang, Ivy</td>
+    <td class="AP Calculus AB" style="background-color: rgb(138, 209, 149); color: rgb(0, 0, 0);"> <b>AP Calculus AB </b> <br> Room 266 <br> Nevard, John</td>
+    <td class="AP Calculus AB" style="background-color: rgb(138, 209, 149); color: rgb(0, 0, 0);"> <b>AP Calculus AB </b> <br> Room 266 <br> Nevard, John</td>
+</tr>
+<tr>
+    <th class="time-period">Period 3 <br>9:56-10:46</th>
+    <td class="AP Computer Science A" style="background-color: rgb(162, 136, 200); color: rgb(0, 0, 0);"> <b>AP Computer Science A </b> <br> Room 136 <br> Carter, Henry</td>
+    <td class="AP Computer Science A" style="background-color: rgb(162, 136, 200); color: rgb(0, 0, 0);"> <b>AP Computer Science A </b> <br> Room 136 <br> Carter, Henry</td>
+    <td class="AP Computer Science A" style="background-color: rgb(162, 136, 200); color: rgb(0, 0, 0);"> <b>AP Computer Science A </b> <br> Room 136 <br> Carter, Henry</td>
+    <td class="AP Computer Science A" style="background-color: rgb(162, 136, 200); color: rgb(0, 0, 0);"> <b>AP Computer Science A </b> <br> Room 136 <br> Carter, Henry</td>
+</tr>
+<tr>
+    <th class="time-period">Period 4 <br>10:50-11:40</th>
+    <td class="IB Lit Lang I" style="background-color: rgb(237, 222, 164); color: rgb(0, 0, 0);"> <b>IB Lit Lang I </b> <br> Room 044 <br> Weems, Richard</td>
+    <td class="Free" style="background-color: rgb(240, 180, 224); color: rgb(0, 0, 0);"> <b>Free </b> <br>  <br> </td>
+    <td class="IB Lit Lang I" style="background-color: rgb(237, 222, 164); color: rgb(0, 0, 0);"> <b>IB Lit Lang I </b> <br> Room 044 <br> Weems, Richard</td>
+    <td class="IB Lit Lang I" style="background-color: rgb(237, 222, 164); color: rgb(0, 0, 0);"> <b>IB Lit Lang I </b> <br> Room 044 <br> Weems, Richard</td>
+    <td class="IB Lit Lang I" style="background-color: rgb(237, 222, 164); color: rgb(0, 0, 0);"> <b>IB Lit Lang I </b> <br> Room 044 <br> Weems, Richard</td>
+</tr>
+<tr>
+    <th class="time-period">Period 5 <br>11:44-12:34</th>
+    <td class="Adv Phys for Eng" style="background-color: rgb(139, 170, 173); color: rgb(0, 0, 0);"> <b>Adv Phys for Eng </b> <br> Room 168 <br> Liva, Michael</td>
+    <td class="IB Hist of Amer I HL" style="background-color: rgb(137, 247, 109); color: rgb(0, 0, 0);"> <b>IB Hist of Amer I HL </b> <br> Room 239 <br> Kramer, Mark</td>
+    <td class="IB Hist of Amer I HL" style="background-color: rgb(137, 247, 109); color: rgb(0, 0, 0);"> <b>IB Hist of Amer I HL </b> <br> Room 239 <br> Kramer, Mark</td>
+    <td class="Adv Phys for Eng" style="background-color: rgb(139, 170, 173); color: rgb(0, 0, 0);"> <b>Adv Phys for Eng </b> <br> Room 168 <br> Liva, Michael</td>
+    <td class="IB Hist of Amer I HL" style="background-color: rgb(137, 247, 109); color: rgb(0, 0, 0);"> <b>IB Hist of Amer I HL </b> <br> Room 239 <br> Kramer, Mark</td>
+</tr>
+<tr>
+    <th class="time-period">Period 6 <br>12:38-1:28</th>
+    <td class="Lunch" style="background-color: rgb(138, 211, 230); color: rgb(0, 0, 0);"> <b>Lunch </b> <br> Upper Cafeteria <br> </td>
+    <td class="Lunch" style="background-color: rgb(138, 211, 230); color: rgb(0, 0, 0);"> <b>Lunch </b> <br> Upper Cafeteria <br> </td>
+    <td class="Lunch" style="background-color: rgb(138, 211, 230); color: rgb(0, 0, 0);"> <b>Lunch </b> <br> Upper Cafeteria <br> </td>
+    <td class="Lunch" style="background-color: rgb(138, 211, 230); color: rgb(0, 0, 0);"> <b>Lunch </b> <br> Upper Cafeteria <br> </td>
+    <td class="Lunch" style="background-color: rgb(138, 211, 230); color: rgb(0, 0, 0);"> <b>Lunch </b> <br> Upper Cafeteria <br> </td>
+</tr>
+<tr>
+    <th class="time-period">Period 7 <br>1:32-2:22</th>
+    <td class="Honors Biology" style="background-color: rgb(245, 201, 154); color: rgb(0, 0, 0);"> <b>Honors Biology </b> <br> Room 147 <br> Downey, Lindsay</td>
+    <td class="Honors Biology" style="background-color: rgb(245, 201, 154); color: rgb(0, 0, 0);"> <b>Honors Biology </b> <br> Room 147 <br> Downey, Lindsay</td>
+    <td class="Honors Biology" style="background-color: rgb(245, 201, 154); color: rgb(0, 0, 0);"> <b>Honors Biology </b> <br> Room 147 <br> Downey, Lindsay</td>
+    <td class="Honors Biology" style="background-color: rgb(245, 201, 154); color: rgb(0, 0, 0);"> <b>Honors Biology </b> <br> Room 147 <br> Downey, Lindsay</td>
+    <td class="Research" style="background-color: rgb(191, 163, 217); color: rgb(0, 0, 0);"> <b>Research </b> <br> Room 168 <br> Liva, Michael</td>
+</tr>
+<tr>
+    <th class="time-period">Period 8 <br>2:26-3:16</th>
+    <td class="IB Español IV SL" style="background-color: rgb(113, 161, 255); color: rgb(0, 0, 0);"> <b>IB Español IV SL </b> <br> Room 125 <br> Calandra, Gabriela</td>
+    <td class="Physical Education" style="background-color: rgb(128, 192, 166); color: rgb(0, 0, 0);"> <b>Physical Education </b> <br> Gym <br> Marmora, Joseph</td>
+    <td class="IB Español IV SL" style="background-color: rgb(113, 161, 255); color: rgb(0, 0, 0);"> <b>IB Español IV SL </b> <br> Room 125 <br> Calandra, Gabriela</td>
+    <td class="IB Español IV SL" style="background-color: rgb(113, 161, 255); color: rgb(0, 0, 0);"> <b>IB Español IV SL </b> <br> Room 125 <br> Calandra, Gabriela</td>
+    <td class="Physical Education" style="background-color: rgb(128, 192, 166); color: rgb(0, 0, 0);"> <b>Physical Education </b> <br> Gym <br> Marmora, Joseph</td>
+</tr>
+<tr>
+    <th class="time-period">Period 9 <br>3:20-4:10</th>
+    <td class="Network Security" style="background-color: rgb(159, 237, 190); color: rgb(0, 0, 0);"> <b>Network Security </b> <br> Room 134 <br> Carter, Henry</td>
+    <td class="Sockets and Threading" style="background-color: rgb(171, 232, 121); color: rgb(0, 0, 0);"> <b>Sockets and Threading </b> <br> Room 134 <br> Carter, Henry</td>
+    <td class="CTF Club" style="background-color: rgb(185, 115, 117); color: rgb(0, 0, 0);"> <b>CTF Club </b> <br> Room 138B <br> Isecke, Benjamin</td>
+    <td class="Network Security" style="background-color: rgb(159, 237, 190); color: rgb(0, 0, 0);"> <b>Network Security </b> <br> Room 134 <br> Carter, Henry</td>
+    <td class="Sockets and Threading" style="background-color: rgb(171, 232, 121); color: rgb(0, 0, 0);"> <b>Sockets and Threading </b> <br> Room 134 <br> Carter, Henry</td>
+</tr></tbody></table>
+</body>
+</html>
