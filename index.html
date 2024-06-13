@@ -16,14 +16,26 @@
 
 <body>
     <div class="sideHeader">
-
+        <a href="https://bcts.powerschool.com/guardian/home.html?_userTypeHint=student">
+            <img src="pages/assets/powerschool.svg" alt="Powerschool" width="90px" height="90px" />
+        </a>
+        <a href="graph.html">
+            <img src="pages/assets/noun-scatter-plot-778853.svg" alt="Charts" width="70px" height="70px"
+                class="filter-blue" />
+        </a>
+        <a href=""><img src="pages/assets/daily-schedule-icon.svg" alt="Schedule" width="80px" height="80px"
+                class="filter-blue" />
+        </a>
+        <a href="index.html"><img src="pages/assets/house-svgrepo-com.svg" alt="Home" width="70px" height="70px"
+                class="filter-blue" />
+        </a>
     </div>
     <div id="app">
         <h1>Welcome, [User]</h1>
     </div>
     <script type="module" src="/main.js"></script>
 
-    
+
     <div class="col-8 offset-2 my-5">
         <div class="card">
             <div class="card-body">
@@ -33,43 +45,43 @@
                 <div class="chart-container">
                     <canvas id="bar"></canvas>
                 </div>
-                <hr> 
+                <hr>
                 <h5>Subject Radar Chart</h5>
                 <hr>
                 <div class="chart-container">
                     <canvas id="radar"></canvas>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    
+
     <script>
         const barCtx = document.getElementById('bar');
         new Chart(barCtx, {
-          type: 'bar',
-          data: {
-            labels: ['23/24', '22/23', '21/22'],
-            datasets: [{
-              label: 'GPA',
-              data: [3.2, 3.7, 4.0],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
+            type: 'bar',
+            data: {
+                labels: ['23/24', '22/23', '21/22'],
+                datasets: [{
+                    label: 'GPA',
+                    data: [3.2, 3.7, 4.0],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
             }
-          }
         });
     </script>
 
-    
+
     <script>
         const radarCtx = document.getElementById('radar');
         const radarData = {
@@ -80,7 +92,7 @@
                 'Foreign Language',
                 'Project',
                 'Gym',
-                
+
             ],
             datasets: [{
                 label: '23/24',
@@ -117,7 +129,7 @@
         };
         new Chart(radarCtx, radarConfig);
     </script>
-       
+
 </body>
 
 </html>
