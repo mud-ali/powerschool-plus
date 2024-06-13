@@ -4,7 +4,6 @@
 
 :root {
   font-family: "Noto Sans", sans-serif;
-  /* line-height: 1.5; */
   font-weight: 400;
 
   color-scheme: light;
@@ -32,4 +31,10 @@
 
 .filter-blue{
   filter: invert(50%) sepia(93%) saturate(1769%) hue-rotate(158deg) brightness(99%) contrast(102%);
+}
+
+.chart-container {
+  max-width: 400px; 
+  margin: auto; 
+  height: auto; 
 }
