@@ -1,10 +1,10 @@
 function scrapeClassInfo() {
-    
+
     chrome.storage.local.get(["info"], function (result) {
         if (result["info"] == undefined) {
             return;
         } else {
-            chrome.storage.local.set({"raw": chrome.storage.local.get("raw") + JSON.stringify(result["info"]) + "\n"});
+            chrome.storage.local.set({ "raw": chrome.storage.local.get("raw") + JSON.stringify(result["info"]) + "\n" });
         }
     });
 
@@ -69,4 +69,4 @@ function scrapeClassInfo() {
 }
 
 scrapeClassInfo();
-document.body.style.backgroundColor = "orange";
+document.body.style.backgroundColor = "purple";
