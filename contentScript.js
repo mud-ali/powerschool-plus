@@ -69,4 +69,4 @@ function scrapeClassInfo() {
 }
 
 scrapeClassInfo();
-document.body.style.backgroundColor = "purple";
+document.body.style.backgroundColor = "#634b7099";

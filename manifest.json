@@ -8,6 +8,12 @@
         "storage",
         "unlimitedStorage"
     ],
+    "browser_action": {
+        "default_icon": {
+            "32": "icon.png"
+        },
+        "default_title": "Open Powerschool+"
+    },
     "manifest_version": 2,
     "background": {
         "scripts": [
